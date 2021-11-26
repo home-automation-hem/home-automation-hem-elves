@@ -1,11 +1,9 @@
 import * as React from "react";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
+import { Grid, Button, Container, Paper, Box } from "@mui/material";
+import LoginComponent from '../../src/components/login/Login.jsx';
+
 import Link from "../../src/components/link/Link";
-import Paper from '@mui/material/Paper';
 import styles from '../../src/styles/LoginPage.module.scss';
-import Box from '@mui/material/Box';
 
 export default function Login() {
     return (
@@ -26,17 +24,13 @@ export default function Login() {
                         flexDirection: "column",
                         '& > :not(style)': {
                             m: 1,
-                            width: 128,
-                            height: 128,
+                            minWidth: 128,
+                            minHeight: 128,
                         },
                     }}
                 >
-
-                    {/*todo */}
-                    {/*    <LoginComponent>*/}
-                    <Paper elevation={3}>
-                        {/*<input type="text"/>*/}
-                        {/*<input type="text"/>*/}
+                    <Paper elevation={1}>
+                        <LoginComponent />
                     </Paper>
 
                     <small>

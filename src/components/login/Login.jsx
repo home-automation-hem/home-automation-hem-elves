@@ -5,7 +5,7 @@ import LockIcon from "@mui/icons-material/Lock";
 
 export default function Login() {
   return (
-    <form className={styles.login-form}>
+    <form className={styles.login_form}>
       <Grid container rowSpacing={1} justifyContent={"center"} sx={{padding: '38px'}}>
         <Grid  item xs = {10} >
           <TextField 
