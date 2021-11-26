@@ -1,0 +1,25 @@
+@use "../../styles/colors";
+
+.user-container {
+  padding: 20px;
+  max-width: 400px;
+
+  .container {
+    // border: 2px dashed slateblue !important;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid hsla(0, 0%, 100%, 0.18824);
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .username {
+    font-weight: 700 !important;
+    font-size: 1.25rem;
+    line-height: 1.7rem;
+  }
+}
