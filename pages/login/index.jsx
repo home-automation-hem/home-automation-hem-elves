@@ -7,8 +7,8 @@ import styles from '../../src/styles/LoginPage.module.scss';
 // todo: try LoginPage, Index if tests fail
 export default function LoginPage() {
   return (
-    // <div className={styles.wrapper}>
-    <div className={'wrapper'}>
+    <div className={styles.wrapper}>
+    {/*<div className={'RAPER'}>*/}
       <Container
         maxWidth="sm"
         sx={{
