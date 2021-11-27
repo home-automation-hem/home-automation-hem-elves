@@ -3,6 +3,8 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Link from "../../src/components/link/Link";
+import Login from "../../src/components/login/Login.jsx";
+
 
 export default function About() {
   return (
@@ -12,7 +14,7 @@ export default function About() {
           <Button variant="contained" component={Link} noLinkStyle href="/">
             🏠 Home
           </Button>
-         
+         <Login/>
         </Grid> 
       </Grid>
     </Container>
