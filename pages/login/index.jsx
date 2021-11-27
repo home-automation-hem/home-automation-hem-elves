@@ -8,7 +8,6 @@ import styles from '../../src/styles/LoginPage.module.scss';
 export default function LoginPage() {
   return (
     <div className={styles.wrapper}>
-    {/*<div className={'RAPER'}>*/}
       <Container
         maxWidth="sm"
         sx={{
