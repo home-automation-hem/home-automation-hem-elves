@@ -1,11 +1,10 @@
 import * as React from "react";
 import { Grid, Button, Container, Paper, Box } from "@mui/material";
-// import LoginComponent from '../../src/components/login/Login.jsx';
 import Login from '../../src/components/login/Login.jsx';
 import Link from "../../src/components/link/Link";
 import styles from '../../src/styles/LoginPage.module.scss';
 
-export default function Index() {
+export default function LoginPage() {
   return (
     <div className={styles.wrapper}>
       <Container
