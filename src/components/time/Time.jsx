@@ -19,7 +19,7 @@ export default function Time() {
     }, []);
 
     return (
-        <div className={'time-wrapper'}>
+        <div className={styles['time-wrapper']}>
             <Typography variant="h6" component="small" gutterBottom className={styles.title}>
                 Time
             </Typography>
