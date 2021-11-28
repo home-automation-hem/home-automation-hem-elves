@@ -3,7 +3,8 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 export default function Weather({ degrees = 22, type = "/images/cloudy.svg" }) {
   return (
-    <Grid container  className={`${styles["weather-wrapper"]}`}>
+      <div className={`${styles["weather-wrapper"]}`}>
+    <Grid container xs={12} >
       <Grid item xs={6} sx={{display:'flex', justifyContent: 'flex-end'}} >
         <img width={'35%'}  src={type}></img>
       </Grid>
@@ -14,5 +15,6 @@ export default function Weather({ degrees = 22, type = "/images/cloudy.svg" }) {
         </Typography>
       </Grid>
     </Grid>
+    </div>
   );
 }
