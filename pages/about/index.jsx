@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Link from "../../src/components/link/Link";
 import Login from "../../src/components/login/Login.jsx";
+import Weather from "../../src/components/weather/Weather.jsx";
 
 
 export default function About() {
@@ -15,6 +16,7 @@ export default function About() {
             🏠 Home
           </Button>
          <Login/>
+         <Weather/>
         </Grid> 
       </Grid>
     </Container>
