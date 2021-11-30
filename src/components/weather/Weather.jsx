@@ -1,6 +1,7 @@
 import styles from "./Weather.module.scss";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+
 export default function Weather({ degrees = 22, type = "/images/cloudy.svg" }) {
   return (
   <div className={`${styles["weather-wrapper"]}`}>
