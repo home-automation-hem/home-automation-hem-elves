@@ -5,9 +5,11 @@ import Link from "../../src/components/link/Link";
 import styles from '../../src/styles/LoginPage.module.scss';
 
 // todo: try LoginPage, Index if tests fail
+
 export default function LoginPage() {
   return (
-    <div className={styles.wrapper}>
+   
+    <div className={styles.wrapper}> 
       <Container
         maxWidth="sm"
         sx={{
