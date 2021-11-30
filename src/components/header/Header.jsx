@@ -23,7 +23,7 @@ export default function Header({ left, right }) {
 
             <Grid
               sx={{ display: 'flex', alignItems: 'flex-end' }}
-              className={styles.left}
+              className={styles.right}
               item
               xs={6}
             >
