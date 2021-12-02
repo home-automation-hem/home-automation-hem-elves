@@ -2,7 +2,7 @@ import { Container, Grid, Avatar, Typography } from "@mui/material";
 import styles from "./User.module.scss";
 import classNames from "classnames";
 
-export default function User({ name, avatar, size = 69 }) {
+export default function User({ name, avatar, size = 69, headingSize, hasWelcome = false }) {
   return (
     <div className={classNames(styles["user-container"])}>
       <Container className={classNames(styles.container)} maxWidth="xl">
@@ -22,7 +22,7 @@ export default function User({ name, avatar, size = 69 }) {
             />
           </Grid>
           <Grid item xs={8}>
-            <Typography variant="body1" className={classNames(styles.username)}>
+            <Typography variant={headingSize} className={classNames(styles.username)}>
               {name}
             </Typography>
           </Grid>
