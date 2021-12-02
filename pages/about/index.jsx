@@ -7,6 +7,7 @@ import Header from '../../src/components/header/Header.jsx';
 import User from '../../src/components/user/User.jsx';
 import Time from '../../src/components/time/Time.jsx';
 import Weather from '../../src/components/weather/Weather.jsx';
+import Thermostat from '../../src/components/thermostat/Thermostat.jsx';
 export default function About() {
   return (
     <>
@@ -19,6 +20,7 @@ export default function About() {
               🏠 Home
             </Button>
           </Grid>
+          <Thermostat/>
         </Grid>
       </Container>
     </>
