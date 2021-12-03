@@ -1,10 +1,13 @@
 import React from 'react';
+import styles from "./Card.module.scss";
+import * as mCard from '@mui/material/Card';
 
-function Card({ iconUrl }) {
+function Card({ iconUrl, outlined = false }) {
   return (
-    <div>
-   123
-    </div>
+    <mCard variant={outlined ? 'outlined' : ''}>
+      123
+      <CardCon
+    </mCard>
   );
 }
 

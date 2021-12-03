@@ -6,6 +6,7 @@ import Link from "../../src/components/link/Link";
 import Login from "../../src/components/login/Login.jsx";
 import Time from "../../src/components/time/Time";
 import Weather from "../../src/components/weather/Weather.jsx";
+import Card from "../../src/components/card/Card.jsx";
 
 export default function About() {
   return (
@@ -19,7 +20,8 @@ export default function About() {
           </Button>
          <Login/>
          <Weather/>
-        </Grid> 
+          <Card/>
+        </Grid>
       </Grid>
     </Container>
   );
