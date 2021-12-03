@@ -1,0 +1,21 @@
+@use "../../styles/colors";
+
+.container{
+  
+  .user-container{     
+    max-width: 350px;
+  }
+
+  .selected{
+    background-color: rgba(116, 65, 243, 0.17) !important;
+    color: #7441F3;
+
+    svg {
+        color: #7441F3;
+    }
+  }
+
+//   .items-container {
+//     overflow-y: hidden;
+//   }
+}

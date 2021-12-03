@@ -6,7 +6,6 @@ function Card({ iconUrl, outlined = false }) {
   return (
     <mCard variant={outlined ? 'outlined' : ''}>
       123
-      <CardCon
     </mCard>
   );
 }
