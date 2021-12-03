@@ -2,8 +2,9 @@ import styles from './Thermostat.module.scss';
 import CircularProgress from '@mui/material/CircularProgress';
 import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 import RemoveCircleOutlinedIcon from '@mui/icons-material/RemoveCircleOutlined';
-import { ComposedChart, Line } from 'recharts';
+import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import { ComposedChart, Line } from 'recharts';
 import { useState } from 'react';
 
 //degrees' range should be from 15° to 50°
@@ -27,10 +28,10 @@ export default function Thermostat({
   // Create handleIncrement event handler
   const handleIncrement = () => {
     if (temp + 1 <= maxTemp) {
-        setTemp((prevTemp) => prevTemp + 1);
-        setButtonDisabled(false);
-    } 
-    
+      setTemp((prevTemp) => prevTemp + 1);
+      setButtonDisabled(false);
+    }
+
     return setButtonDisabled(true);
   };
 
@@ -46,7 +47,7 @@ export default function Thermostat({
 
   return (
     <div>
-      <Grid container width={802} height={402}>
+      <Grid container width={802} height={403}>
         <Grid
           item
           xs={12}
@@ -59,17 +60,17 @@ export default function Thermostat({
           }}
         >
           <CircularProgress
-            sx={{ display: 'flex', position: 'absolute', zIndex: 1 }}
-            thickness={2.5}
-            size={450}
+            sx={{ display: 'flex', position: 'absolute', zIndex: 1, mt: 1 }}
+            thickness={2.2}
+            size={420}
             variant="determinate"
             value={temp}
             style={{ color: 'white', transform: 'rotate(180deg)' }}
           />
           <CircularProgress
-            sx={{ display: 'flex', position: 'absolute' }}
-            thickness={2.5}
-            size={450}
+            sx={{ display: 'flex', position: 'absolute', mt: 1 }}
+            thickness={2.2}
+            size={420}
             variant="determinate"
             value={50}
             style={{ color: '#B84C62', transform: 'rotate(180deg)' }}
@@ -80,24 +81,25 @@ export default function Thermostat({
               position: 'absolute',
               zIndex: 1,
               alignItems: 'center',
-              top: '17%',
+              top: '24%',
             }}
           >
-            <RemoveCircleOutlinedIcon
-             
-              onClick={handleDecrement}
-              value={50}
-              fontSize="large"
-              className={styles.button}
-            />
+            <Button size="small">
+              <RemoveCircleOutlinedIcon
+                onClick={handleDecrement}
+                fontSize="large"
+                className={styles.button}
+              />
+            </Button>
+
             <h1 className={styles.temperature}>{temp}°</h1>
-            <AddCircleOutlinedIcon
-              
-              onClick={handleIncrement}
-              value={15}
-              fontSize="large"
-              className={styles.button}
-            />
+            <Button size="small">
+              <AddCircleOutlinedIcon
+                onClick={handleIncrement}
+                fontSize="large"
+                className={styles.button}
+              />
+            </Button>
           </div>
         </Grid>
         <Grid
@@ -123,9 +125,13 @@ export default function Thermostat({
               left: 20,
             }}
           >
-            {' '}
-           
-            <Line type="monotone" dataKey="temperature" stroke="white" />
+            <Line
+              type="monotone"
+              dataKey="temperature"
+              stroke="white"
+              strokeWidth={3}
+              dot={{ strokeWidth: 6 }}
+            />
           </ComposedChart>
         </Grid>
       </Grid>
