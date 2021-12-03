@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import { ComposedChart, Line } from 'recharts';
 import { useState } from 'react';
+import { IconButton } from '@mui/material';
 
 //degrees' range should be from 15° to 50°
 // backdropFilter is not working, put oppacity to see the container
@@ -81,25 +82,25 @@ export default function Thermostat({
               position: 'absolute',
               zIndex: 1,
               alignItems: 'center',
-              top: '24%',
+              top: '17%',
             }}
           >
-            <Button size="small">
+            <IconButton size="small">
               <RemoveCircleOutlinedIcon
                 onClick={handleDecrement}
                 fontSize="large"
                 className={styles.button}
               />
-            </Button>
+            </IconButton>
 
             <h1 className={styles.temperature}>{temp}°</h1>
-            <Button size="small">
+            <IconButton size="small">
               <AddCircleOutlinedIcon
                 onClick={handleIncrement}
                 fontSize="large"
                 className={styles.button}
               />
-            </Button>
+            </IconButton>
           </div>
         </Grid>
         <Grid
