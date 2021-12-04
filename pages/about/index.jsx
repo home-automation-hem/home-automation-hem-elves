@@ -23,7 +23,8 @@ export default function About() {
             </Button>
           </Grid>
           <Thermostat/>
-          <Card />
+          <Card iconUrl={'/images/rainy.svg'} outlined={true}/>
+          <Card iconUrl={'/images/sunny.svg'}/>
         </Grid>
       </Container>
     </>
