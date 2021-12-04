@@ -1,21 +1,19 @@
 import React from 'react';
 import styles from "./Card.module.scss";
-import * as mCard from '@mui/material/Card';
+import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 
-function Card({ iconUrl, outlined = false }) {
+export default function Index({ iconUrl, onClick, outlined = false }) {
   return (
-    <mCard variant={outlined ? 'outlined' : ''}>
-      <Grid container xs={12} >
-        <Grid item xs={6}>
+    <Card className={styles.card} variant={outlined ? 'outlined' : ''}>
+      <Grid container>
+        <Grid item xs={3}>
           {
-            outlined ? <img width={'25%'} src={iconUrl} alt=""/> : ""
+            iconUrl ? <img width={'25%'} src={iconUrl} alt=""/> : ""
           }
 
         </Grid>
       </Grid>
-    </mCard>
+    </Card>
   );
 }
-
-export default Card;
