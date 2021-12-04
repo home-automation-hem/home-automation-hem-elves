@@ -8,6 +8,8 @@ import User from '../../src/components/user/User.jsx';
 import Time from '../../src/components/time/Time.jsx';
 import Weather from '../../src/components/weather/Weather.jsx';
 import Thermostat from '../../src/components/thermostat/Thermostat.jsx';
+import Card from '../../src/components/card/Card';
+
 export default function About() {
   return (
     <>
@@ -21,6 +23,8 @@ export default function About() {
             </Button>
           </Grid>
           <Thermostat/>
+          <Card iconUrl={'/images/rainy.svg'} outlined={true}/>
+          <Card iconUrl={'/images/sunny.svg'}/>
         </Grid>
       </Container>
     </>
