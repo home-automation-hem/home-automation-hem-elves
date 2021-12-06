@@ -8,13 +8,32 @@ import User from '../../src/components/user/User.jsx';
 import Time from '../../src/components/time/Time.jsx';
 import Weather from '../../src/components/weather/Weather.jsx';
 import Thermostat from '../../src/components/thermostat/Thermostat.jsx';
-import Card from '../../src/components/card/Card';
+import Scenes from '../../src/components/scenes/Scenes.jsx';
 
 export default function About() {
+
+
+  let cards = [
+    { iconUrl: '/images/sunny.svg', outlined: false},
+    { iconUrl: '/images/alarm-clock.svg', outlined: false },
+    { iconUrl: '/images/shower.svg', outlined: false },
+    { iconUrl: '/images/tea-cup.svg', outlined: false },
+    { iconUrl: '/images/rock.svg', outlined: false },
+    { iconUrl: '/images/plus.svg', outlined: true },
+  ];
+
   return (
     <>
-      {' '}
-      <Header left={<User />} right={<React.Fragment> <Weather/><Time /></React.Fragment>} />
+      <Header
+        left={<User />}
+        right={
+          <React.Fragment>
+         
+            <Weather />
+            <Time />
+          </React.Fragment>
+        }
+      />
       <Container maxWidth="xl">
         <Grid container justifyContent="center">
           <Grid item>
@@ -22,11 +41,12 @@ export default function About() {
               🏠 Home
             </Button>
           </Grid>
-          <Thermostat/>
-          <Card iconUrl={'/images/rainy.svg'} outlined={true}/>
-          <Card iconUrl={'/images/sunny.svg'}/>
+          <Thermostat />
+        
+          <Scenes cards={cards}/>
         </Grid>
       </Container>
     </>
   );
 }
+//iconUrl={'/images/rainy.svg'} outlined={true}
