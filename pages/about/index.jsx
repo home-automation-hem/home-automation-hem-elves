@@ -9,10 +9,9 @@ import Time from '../../src/components/time/Time.jsx';
 import Weather from '../../src/components/weather/Weather.jsx';
 import Thermostat from '../../src/components/thermostat/Thermostat.jsx';
 import Scenes from '../../src/components/scenes/Scenes.jsx';
+import Cameras from '../../src/components/cameras/Cameras.jsx';
 
 export default function About() {
-
-
   let cards = [
     { iconUrl: '/images/sunny.svg', outlined: false},
     { iconUrl: '/images/alarm-clock.svg', outlined: false },
@@ -20,6 +19,15 @@ export default function About() {
     { iconUrl: '/images/tea-cup.svg', outlined: false },
     { iconUrl: '/images/rock.svg', outlined: false },
     { iconUrl: '/images/plus.svg', outlined: true },
+  ];
+
+  let cameras = [
+    { videoUrl: '/videos/balcony.mp4', outlined: true},
+    { videoUrl: '/videos/bathroom.mp4', outlined: false },
+    { videoUrl: '/videos/front-door.mp4', outlined: true },
+    { videoUrl: '/videos/garden.mp4', outlined: false },
+    // { videoUrl: '/videos/balcony.mp4', outlined: false },
+    // { videoUrl: '/videos/balcony.mp4', outlined: true },
   ];
 
   return (
@@ -42,8 +50,9 @@ export default function About() {
             </Button>
           </Grid>
           <Thermostat />
-        
+
           <Scenes cards={cards}/>
+          <Cameras cameras={cameras} hasButton={true}/>
         </Grid>
       </Container>
     </>
