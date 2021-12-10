@@ -9,7 +9,7 @@ export default function Cameras ({ cameras, hasButton }) {
   return (
     <div>
      <Card
-       autoplay={true}
+       autoPlay={true}
        width={500}
        height={400}
        iconUrl={current?.videoUrl || ''}
@@ -28,6 +28,7 @@ export default function Cameras ({ cameras, hasButton }) {
           >
             <div onClick={() => setCurrent(camera)}>
               <Card
+                autoPlay={false}
                 key={idx}
                 iconUrl={camera.videoUrl}
                 outlined={hasButton}
