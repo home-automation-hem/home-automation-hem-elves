@@ -3,7 +3,7 @@ import styles from './Card.module.scss';
 import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 
-export default function Index({ autoPlay, iconUrl, onClick, outlined = false }) {
+export default function Index({ autoPlay, iconUrl, outlined = false }) {
   const isVideo = iconUrl.includes('videos') ||  iconUrl.includes('mp4');
 
   return (
