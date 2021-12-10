@@ -20,4 +20,4 @@ yarn-error.log*
 # Custom
 .idea/
 
-public/videos
+public/videos/

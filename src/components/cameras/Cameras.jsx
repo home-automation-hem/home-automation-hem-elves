@@ -16,7 +16,6 @@ export default function Cameras ({ cameras, hasButton }) {
        outlined={hasButton}
      />
 
-
       <Grid container width={802} height={403}>
         {cameras.map((camera, idx) => (
           <Grid

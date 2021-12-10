@@ -10,7 +10,7 @@ export default function Index({ autoplay, iconUrl, onClick, outlined = false }) 
     <Card className={styles.card} variant={outlined ? 'outlined' : ''}>
       {iconUrl ? (
         isVideo ? (
-          <video width={'100%'} src={iconUrl} autoplay={autoplay ? 'autoplay' : null} alt="iconUrl" />
+          <video width={'100%'} src={iconUrl} autoPlay={autoplay ? 'autoplay' : null} alt="iconUrl" />
         ) : <img width={'40%'} src={iconUrl} alt="iconUrl" />
       ) : ''}
     </Card>
