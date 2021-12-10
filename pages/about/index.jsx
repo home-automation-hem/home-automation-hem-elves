@@ -10,10 +10,11 @@ import Weather from '../../src/components/weather/Weather.jsx';
 import Thermostat from '../../src/components/thermostat/Thermostat.jsx';
 import Scenes from '../../src/components/scenes/Scenes.jsx';
 import Cameras from '../../src/components/cameras/Cameras.jsx';
+import Energy from '../../src/components/energy/Energy.jsx';
 
 export default function About() {
   let cards = [
-    { iconUrl: '/images/sunny.svg', outlined: false},
+    { iconUrl: '/images/sunny.svg', outlined: false },
     { iconUrl: '/images/alarm-clock.svg', outlined: false },
     { iconUrl: '/images/shower.svg', outlined: false },
     { iconUrl: '/images/tea-cup.svg', outlined: false },
@@ -39,18 +40,29 @@ export default function About() {
         left={<User />}
         right={
           <React.Fragment>
-         
             <Weather />
             <Time />
           </React.Fragment>
         }
       />
-      <Container maxWidth="xl">
-        <Grid container justifyContent="center">
-          <Grid item>
-            <Button variant="contained" component={Link} noLinkStyle href="/">
-              🏠 Home
-            </Button>
+      <Container
+        minWidth="xs"
+        maxWidth="100%"
+        sx={{ backgroundColor: '#F8F8F8' }}
+        p={0}
+      >
+        <Grid container justifyContent="center" xs={12}>
+          <Grid item xs={6}>
+            <Thermostat />
+          </Grid>
+          <Grid item xs={6}>
+            <Scenes cards={cards} />
+          </Grid>
+          <Grid item xs={6}>
+            <Cameras cameras={cameras} hasButton={true} />
+          </Grid>
+          <Grid item xs={6}>
+            <Energy />
           </Grid>
           <Thermostat />
 
@@ -62,3 +74,6 @@ export default function About() {
   );
 }
 //iconUrl={'/images/rainy.svg'} outlined={true}
+  {/* <Button variant="contained" component={Link} noLinkStyle href="/">
+              🏠 Home
+            </Button> */}
