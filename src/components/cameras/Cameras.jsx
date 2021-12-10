@@ -3,7 +3,7 @@ import styles from './Cameras.module.scss';
 import Card from '../card/Card.jsx';
 import { Grid } from '@mui/material';
 
-export default function Cameras ({ cameras, hasButton }) {
+export default function Cameras ({ cameras, hasButton = false }) {
   const [current, setCurrent] = useState('');
 
   return (
