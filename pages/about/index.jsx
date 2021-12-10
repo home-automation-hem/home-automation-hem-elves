@@ -27,7 +27,7 @@ export default function About() {
     { videoUrl: '/videos/front-door.mp4' },
     { videoUrl: '/videos/garden.mp4' },
     { videoUrl: '/videos/kitchen.mp4' },
-    // { videoUrl: '/videos/balcony.mp4', outlined: true },
+    { videoUrl: '/videos/living room 2.mp4' },
   ];
 
   return (
