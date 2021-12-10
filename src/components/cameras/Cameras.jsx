@@ -8,15 +8,14 @@ export default function Cameras ({ cameras, hasButton = false }) {
 
   return (
     <div>
-     <Card
-       autoPlay={true}
-       width={500}
-       height={400}
-       iconUrl={current?.videoUrl || ''}
-       outlined={hasButton}
-     />
-
       <Grid container width={802} height={403}>
+        <Card
+          autoPlay={true}
+          width={500}
+          height={400}
+          iconUrl={current?.videoUrl || '/videos/balcony.mp4'}
+          outlined={hasButton}
+        />
         {cameras.map((camera, idx) => (
           <Grid
             item
