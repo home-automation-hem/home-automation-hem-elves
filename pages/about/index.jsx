@@ -28,6 +28,9 @@ export default function About() {
     // { videoUrl: '/videos/garden.mp4' },
     { videoUrl: '/videos/kitchen.mp4' },
     // { videoUrl: '/videos/living room 2.mp4' },
+
+    { videoUrl: '/videos/balcony.mp4' },
+    { videoUrl: '/videos/bathroom.mp4' },
   ];
 
   return (
