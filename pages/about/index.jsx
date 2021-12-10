@@ -10,9 +10,19 @@ import Weather from '../../src/components/weather/Weather.jsx';
 import Thermostat from '../../src/components/thermostat/Thermostat.jsx';
 import Scenes from '../../src/components/scenes/Scenes.jsx';
 import Cameras from '../../src/components/cameras/Cameras.jsx';
+import Rooms from '../../src/components/rooms/Rooms.jsx';
 import Energy from '../../src/components/energy/Energy.jsx';
 
 export default function About() {
+  let rooms = [
+    { iconUrl: '/images/sunny.svg', title: 'Living room'},
+    { iconUrl: '/images/alarm-clock.svg', title: 'Bedroom' },
+    { iconUrl: '/images/shower.svg', title: 'Toilet'},
+    { iconUrl: '/images/tea-cup.svg', title: 'Patio' },
+    { iconUrl: '/images/rock.svg', title: 'Bathroom' },
+    { iconUrl: '/images/plus.svg', title: 'Create new' },
+  ];
+
   let cards = [
     { iconUrl: '/images/sunny.svg', outlined: false },
     { iconUrl: '/images/alarm-clock.svg', outlined: false },
@@ -68,12 +78,14 @@ export default function About() {
 
           <Scenes cards={cards}/>
           <Cameras cameras={cameras} hasButton={true}/>
+
+          <Rooms rooms={rooms}/>
         </Grid>
       </Container>
     </>
   );
 }
 //iconUrl={'/images/rainy.svg'} outlined={true}
-  {/* <Button variant="contained" component={Link} noLinkStyle href="/">
-              🏠 Home
-            </Button> */}
+{/* <Button variant="contained" component={Link} noLinkStyle href="/">
+    🏠 Home
+  </Button> */}

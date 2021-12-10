@@ -1,13 +1,13 @@
 import React, {useRef} from 'react';
 import styles from './Card.module.scss';
 import Card from '@mui/material/Card';
-import Grid from '@mui/material/Grid';
 
-export default function Index({ autoPlay, iconUrl, outlined = false }) {
+export default function Index({ autoPlay, title, iconUrl, outlined = false }) {
   const isVideo = iconUrl.includes('videos') ||  iconUrl.includes('mp4');
 
   return (
     <Card className={styles.card} variant={outlined ? 'outlined' : ''}>
+      <h3>{title}</h3>
       {iconUrl ? (
         isVideo ? (
           <video width={'100%'}
