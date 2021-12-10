@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import styles from './Card.module.scss';
 import Card from '@mui/material/Card';
 import { Typography } from '@mui/material';

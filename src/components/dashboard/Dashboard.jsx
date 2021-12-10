@@ -1,17 +1,19 @@
-import * as React from 'react';
+import React from 'react';
+import Header from '../header/Header';
+import User from '../user/User';
+import Weather from '../weather/Weather';
+import Time from '../time/Time';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Header from '../../src/components/header/Header.jsx';
-import User from '../../src/components/user/User.jsx';
-import Time from '../../src/components/time/Time.jsx';
-import Weather from '../../src/components/weather/Weather.jsx';
-import Thermostat from '../../src/components/thermostat/Thermostat.jsx';
-import Scenes from '../../src/components/scenes/Scenes.jsx';
-import Cameras from '../../src/components/cameras/Cameras.jsx';
-import Rooms from '../../src/components/rooms/Rooms.jsx';
-import Energy from '../../src/components/energy/Energy.jsx';
+import Thermostat from '../thermostat/Thermostat';
+import Scenes from '../scenes/Scenes';
+import Cameras from '../cameras/Cameras';
+import Energy from '../energy/Energy';
+import Rooms from '../rooms/Rooms';
+import {Typography} from '@mui/material';
+import Navigation from '../navigation/Navigation';
 
-export default function About() {
+export default function Dashboard(props) {
   let rooms = [
     { iconUrl: '/images/sunny.svg', title: 'Living room'},
     { iconUrl: '/images/alarm-clock.svg', title: 'Bedroom' },
@@ -42,8 +44,9 @@ export default function About() {
     { videoUrl: '/videos/bathroom.mp4' },
   ];
 
+
   return (
-    <>
+    <div>
       <Header
         left={<User />}
         right={
@@ -53,6 +56,7 @@ export default function About() {
           </React.Fragment>
         }
       />
+      <Navigation />
       <Container
         minWidth="xs"
         maxWidth="100%"
@@ -79,13 +83,9 @@ export default function About() {
           <Grid item xs={6}>
             <Rooms rooms={rooms}/>
           </Grid>
-
         </Grid>
       </Container>
-    </>
+    </div>
   );
 }
-//iconUrl={'/images/rainy.svg'} outlined={true}
-{/* <Button variant="contained" component={Link} noLinkStyle href="/">
-    🏠 Home
-  </Button> */}
+
