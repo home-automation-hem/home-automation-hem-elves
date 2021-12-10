@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/videos
 
 # misc
 .DS_Store
@@ -21,3 +22,5 @@ yarn-error.log*
 .idea/
 
 public/videos/
+*.mp4
+
