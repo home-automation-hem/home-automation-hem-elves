@@ -1,13 +1,14 @@
 import React, {useRef} from 'react';
 import styles from './Card.module.scss';
 import Card from '@mui/material/Card';
+import { Typography } from '@mui/material';
 
 export default function Index({ autoPlay, title, iconUrl, outlined = false }) {
   const isVideo = iconUrl.includes('videos') ||  iconUrl.includes('mp4');
 
   return (
     <Card className={styles.card} variant={outlined ? 'outlined' : ''}>
-      <h3>{title}</h3>
+      <Typography variant="h3">{title}</Typography>
       {iconUrl ? (
         isVideo ? (
           <video width={'100%'}
