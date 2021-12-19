@@ -61,7 +61,7 @@ export default function About() {
       >
         <Grid container justifyContent="center" xs={12}>
           <Grid item xs={6}>
-            <Thermostat />
+          <Thermostat/>
           </Grid>
 
           <Grid item xs={6}>

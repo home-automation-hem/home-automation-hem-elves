@@ -39,7 +39,7 @@ export default function Energy({
           </Select>
         </Grid>
       </Grid>
-      <Grid item className={styles.chart}>
+      <Grid item className={styles.chart} maxWidth={'803px'}>
         <ComposedChart
           width={803}
           height={389}
