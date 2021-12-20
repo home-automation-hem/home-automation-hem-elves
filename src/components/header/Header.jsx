@@ -8,7 +8,7 @@ export default function Header({ left, right }) {
   return (
     <div className={`${styles['header-wrapper']}`}>
       <Container maxWidth="xl" className={styles.container}>
-        <Paper variant='elevation' elevation={3}>
+        <Paper sx={{position: 'relative', left:'181px', top: '46px'}} variant='elevation' elevation={3} >
           <Grid container xs={12}>
             <Grid
               sx={{ display: 'flex', alignItems: 'flex-start' }}
@@ -17,8 +17,8 @@ export default function Header({ left, right }) {
               xs={6}
             >
               <React.Fragment>{left}</React.Fragment>
-              <p> Welcome home,</p>
-              <h1>John Doe</h1>
+              {/* <p> Welcome home,</p>
+              <h1>John Doe</h1> */}
             </Grid>
 
             <Grid
