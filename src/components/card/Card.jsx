@@ -12,40 +12,29 @@ export default function Index({ autoPlay, title, variant, iconUrl, outlined = fa
   // else if (variant === "offline") {}
   // else if (variant === "on") {}
 
-  // if (variant === "off") {}
-  // else if (variant === "offline") {}
-  // else if (variant === "on") {}
-  let shouldRender =
-    variant?.toLowerCase() === "off" ||
-    variant?.toLowerCase() === "offline" ||
-    variant?.toLowerCase() === "on";
-
   return (
-    shouldRender ? (
-        <Card className={styles.card} variant={outlined ? 'outlined' : ''}>
-          {/*<Chip label={""} />*/}
+    <Card className={styles.card} variant={outlined ? 'outlined' : ''}>
+      {/*<Chip label={""} />*/}
 
-          <Typography variant="h3">{title}</Typography>
-          {
-            title?.toLowerCase() === "offline".toLowerCase() ? <Chip label={"!"} /> : null
-            // variant?.toLowerCase() === "offline".toLowerCase() ? <Chip label={"!"} /> : null
-          }
-          {iconUrl ? (
-            isVideo ? (
-              <video
-                width={'100%'}
-                src={iconUrl}
-                autoPlay={autoPlay ? 'autoplay' : null}
-                autoplay={autoPlay ? 'autoplay' : null}
-                alt="iconUrl" />
-            ) : <React.Fragment>
-              <img width={'40%'} src={iconUrl} alt="iconUrl" />
-            </React.Fragment>
-          ) : <React.Fragment>
-            <img width={'40%'} src={iconUrl} alt="iconUrl" />
-          </React.Fragment> }
-        </Card>
-      )
-     : null
+      <Typography variant="h3">{title}</Typography>
+      {
+        title?.toLowerCase() === "offline".toLowerCase() ? <Chip label={"!"} /> : null
+        // variant?.toLowerCase() === "offline".toLowerCase() ? <Chip label={"!"} /> : null
+      }
+      {iconUrl ? (
+        isVideo ? (
+          <video
+            width={'100%'}
+            src={iconUrl}
+            autoPlay={autoPlay ? 'autoplay' : null}
+            autoplay={autoPlay ? 'autoplay' : null}
+            alt="iconUrl" />
+        ) : <React.Fragment>
+          <img width={'40%'} src={iconUrl} alt="iconUrl" />
+        </React.Fragment>
+      ) : <React.Fragment>
+        <img width={'40%'} src={iconUrl} alt="iconUrl" />
+      </React.Fragment> }
+    </Card>
   );
 }
