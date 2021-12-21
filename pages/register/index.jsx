@@ -1,15 +1,13 @@
 import * as React from "react";
 import { Grid, Button, Container, Paper, Box } from "@mui/material";
-import Login from '../../src/components/login/Login.jsx';
-import Link from "../../src/components/link/Link";
+import Register from '../../src/components/register/Register.jsx';
 import styles from '../../src/styles/LoginPage.module.scss';
+import Link from 'next/link';
 
-// todo: try LoginPage, Index if tests fail
-
-export default function LoginPage() {
+// todo: try RegisterPage, Index if tests fail
+export default function RegisterPage() {
   return (
-   
-    <div className={styles.wrapper}> 
+    <div className={styles.wrapper}>
       <Container
         maxWidth="sm"
         sx={{
@@ -33,13 +31,13 @@ export default function LoginPage() {
           }}
         >
           <Paper elevation={1}>
-            <Login />
+            <Register />
           </Paper>
 
           <small>
-            Don't have an account?&nbsp;
-            <Link href={'/register'}>
-              <a>Register today!</a>
+            Already registered?&nbsp;
+            <Link href={'/login'}>
+              <a>Go to login.</a>
             </Link>
           </small>
         </Box>
