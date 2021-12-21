@@ -48,7 +48,7 @@ export default function About() {
     { iconUrl: '/images/bulb.svg', title: 'off'},
     { iconUrl: '/images/plug.svg', title: 'off' },
     { iconUrl: '/images/plug.svg', title: 'offline' },
-    { iconUrl: '/images/plus.svg', title: '' },
+    // { iconUrl: '/images/plus.svg', title: '' },
   ];
 
   return (
@@ -63,7 +63,7 @@ export default function About() {
         }
       />
 
-      <Devices devices={devices} />
+      {/*<Devices devices={devices} />*/}
 
       <Container
         minWidth="xs"
