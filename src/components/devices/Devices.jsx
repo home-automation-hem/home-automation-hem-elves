@@ -22,20 +22,11 @@ export default function Devices({ devices }) {
               variant={device.title} />
           </Grid>
         ))}
-        <Grid
-          p={2}
-          item
-          xs={4}
-          md={4}
-          maxWidth={267}
-          minHeight={201}
-        >
           <Card
             iconUrl={'/images/plus.svg'}
             title={''}
             variant={''}
             outlined={true}/>
-        </Grid>
       </Grid >
     </div>
   );
