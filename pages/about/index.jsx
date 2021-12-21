@@ -63,7 +63,7 @@ export default function About() {
         }
       />
 
-      <Devices devices={devices} />
+      {/*<Devices devices={devices} />*/}
 
       <Container
         minWidth="xs"
