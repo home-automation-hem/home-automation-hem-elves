@@ -17,7 +17,6 @@ export default function Index({ autoPlay, title, variant, iconUrl, outlined = fa
       {/*<Chip label={""} />*/}
 
       <Typography variant="h3">{title}</Typography>
-
       {
         variant?.toLowerCase() === "offline".toLowerCase()
           ? <Chip label={"!"} />
