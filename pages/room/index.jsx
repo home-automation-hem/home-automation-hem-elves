@@ -7,6 +7,8 @@ import Cameras from '../../src/components/cameras/Cameras.jsx';
 import User from '../../src/components/user/User.jsx';
 import Weather from '../../src/components/weather/Weather.jsx';
 import Time from '../../src/components/time/Time.jsx';
+import styles from '../Room.module.scss';
+import { flexbox } from '@mui/material/node_modules/@mui/system';
 
 export default function RoomPage() {
   let cameras = [
@@ -21,33 +23,35 @@ export default function RoomPage() {
   ];
 
   let devices = [
-    { iconUrl: '/images/bulb.svg', title: 'ON' },
+    { iconUrl: '/images/bulb.svg', title: 'ON', filled: true },
     { iconUrl: '/images/bulb.svg', title: 'OFF' },
     { iconUrl: '/images/plug.svg', title: 'OFF' },
     { iconUrl: '/images/plug.svg', title: 'OFFLINE' },
-    { iconUrl: '/images/plus.svg' },
+    { iconUrl: '/images/plus.svg', outlined: true },
   ];
 
   return (
     <div>
       <Header
-        left={<User />}
+        left={<h1>LIVING ROOM</h1>}
         right={
-          <React.Fragment>
-            <Weather />
-            <Time />
-          </React.Fragment>
+        <h2>DEVICES 3</h2>
         }
       />
       <Navigation />
-      <Container>
-        <Grid container>
-          <Typography>Devices</Typography>
-          <Grid item xs={6}>
+      <Container className={styles.rootContainer}>
+        <Grid  container sx={{ pt: '10%',  }}>
+          <Grid item xs={7}>
+            <Typography variant="h4">Devices</Typography>
+          </Grid>
+          <Grid item xs={5} sx={{pl: '120px'}}>
+            <Typography variant="h4">Cameras</Typography>
+          </Grid>
+          <Grid item xs={7} >
             <Devices devices={devices} />
-          </Grid>{' '}
-          <Typography>Cameras</Typography>
-          <Grid item xs={6}>
+          </Grid>
+
+          <Grid item xs={5} sx={{pl: '120px'}}>
             <Cameras cameras={cameras} hasButton={true} />
           </Grid>
         </Grid>

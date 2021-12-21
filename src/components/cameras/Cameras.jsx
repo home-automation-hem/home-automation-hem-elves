@@ -7,8 +7,8 @@ export default function Cameras ({ cameras, hasButton = false }) {
   const [current, setCurrent] = useState('');
 
   return (
-    <div>
-      <Grid container >
+    <div className={styles.wrapper}>
+      <Grid container  width={700} height={383} display={'flex'} justifyContent={'flex-end'}>
         <Card
           autoPlay={true}
          
@@ -18,14 +18,15 @@ export default function Cameras ({ cameras, hasButton = false }) {
         {cameras.map((camera, idx) => (
           <Grid
             item
-            xs={4}
-            md={4}
-            width={267}
-            height={201}
+            xs={2}
+            key={camera.idx}
+         
+        height={'18%'}
             sx={{ backgroundColor: '#EBE6F7' }}
           >
             <div onClick={() => setCurrent(camera)}>
-              <Card
+              <Card  
+        
                 autoPlay={false}
                 key={idx}
                 iconUrl={camera.videoUrl}

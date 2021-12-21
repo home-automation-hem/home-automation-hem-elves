@@ -16,8 +16,8 @@ export default function Index({ autoPlay, title, iconUrl, outlined = false }) {
                  autoPlay={autoPlay ? 'autoplay' : null}
                  autoplay={autoPlay ? 'autoplay' : null}
                  alt="iconUrl" />
-        ) : <img width={'40%'} src={iconUrl} alt="iconUrl" />
-      ) : <img width={'40%'} src={iconUrl} alt="iconUrl" />}
+        ) : <img width={'30%'} src={iconUrl} alt="iconUrl" />
+      ) : <img width={'30%'} src={iconUrl} alt="iconUrl" />}
     </Card>
   );
 }
