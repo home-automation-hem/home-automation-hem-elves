@@ -10,6 +10,7 @@ import Scenes from '../../src/components/scenes/Scenes.jsx';
 import Cameras from '../../src/components/cameras/Cameras.jsx';
 import Rooms from '../../src/components/rooms/Rooms.jsx';
 import Energy from '../../src/components/energy/Energy.jsx';
+import Devices from '../../src/components/devices/Devices.jsx';
 
 export default function About() {
   let rooms = [
@@ -42,6 +43,14 @@ export default function About() {
     { videoUrl: '/videos/bathroom.mp4' },
   ];
 
+  let devices = [
+    { iconUrl: '/images/bulb.svg', title: 'on' },
+    { iconUrl: '/images/bulb.svg', title: 'off'},
+    { iconUrl: '/images/plug.svg', title: 'off' },
+    { iconUrl: '/images/plug.svg', title: 'offline' },
+    // { iconUrl: '/images/plus.svg', title: '' },
+  ];
+
   return (
     <>
       <Header
@@ -53,6 +62,9 @@ export default function About() {
           </React.Fragment>
         }
       />
+
+      <Devices devices={devices} />
+
       <Container
         minWidth="xs"
         maxWidth="100%"
@@ -61,7 +73,7 @@ export default function About() {
       >
         <Grid container justifyContent="center" xs={12}>
           <Grid item xs={6}>
-            <Thermostat />
+          <Thermostat/>
           </Grid>
 
           <Grid item xs={6}>
