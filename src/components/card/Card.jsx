@@ -14,8 +14,15 @@ export default function Index({ autoPlay, title, variant, iconUrl, outlined = fa
 
   return (
     <Card className={styles.card} variant={outlined ? 'outlined' : ''}>
+      {/*<Chip label={""} />*/}
+
       <Typography variant="h3">{title}</Typography>
-      { variant === "offline" ? <Chip label={"!"} /> : '' }
+
+      {
+        variant?.toLowerCase() === "offline".toLowerCase()
+          ? <Chip label={"!"} />
+          : ''
+      }
       {iconUrl ? (
         isVideo ? (
           <video
