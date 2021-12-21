@@ -12,6 +12,7 @@ import Energy from '../energy/Energy';
 import Rooms from '../rooms/Rooms';
 import {Typography} from '@mui/material';
 import Navigation from '../navigation/Navigation';
+import Modal from '../../components/modal/Modal';
 
 export default function Dashboard(props) {
   let rooms = [
@@ -82,6 +83,8 @@ export default function Dashboard(props) {
 
           <Grid item xs={6}>
             <Rooms rooms={rooms}/>
+
+            <Modal title={"hi 123"} />
           </Grid>
         </Grid>
       </Container>
