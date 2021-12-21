@@ -7,11 +7,11 @@ export default function Devices({ devices }) {
     <div className={`${styles['devices-wrapper']}`}>
       <Grid container width={802} height={403} display={'flex'} justifyContent={'center'}>
         {devices.map((device, idx) => (
-          (
-            device.title?.toLowerCase() === "off" ||
-            device.title?.toLowerCase() === "offline" ||
-            device.title?.toLowerCase() === "on"
-          ) ? (
+          // (
+          //   device.title?.toLowerCase() === "off" ||
+          //   device.title?.toLowerCase() === "offline" ||
+          //   device.title?.toLowerCase() === "on"
+          // ) ? (
               <Grid
                 p={2}
                 item
@@ -28,7 +28,7 @@ export default function Devices({ devices }) {
                   outlined={idx === devices.length - 1}
                 />
               </Grid>
-          ) : null
+          // ) : null
         ))}
       </Grid>
     </div>
