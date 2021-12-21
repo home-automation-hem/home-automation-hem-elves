@@ -1,16 +1,13 @@
-import React, { Fragment } from 'react';
+
 import { Grid, Typography, Container } from '@mui/material';
 import Header from '../../src/components/header/Header.jsx';
 import Navigation from '../../src/components/navigation/Navigation.jsx';
 import Devices from '../../src/components/devices/Devices.jsx';
 import Cameras from '../../src/components/cameras/Cameras.jsx';
-import User from '../../src/components/user/User.jsx';
-import Weather from '../../src/components/weather/Weather.jsx';
-import Time from '../../src/components/time/Time.jsx';
 import styles from '../Room.module.scss';
-import { flexbox } from '@mui/material/node_modules/@mui/system';
 
-export default function RoomPage() {
+
+export default function Index() {
   let cameras = [
     { videoUrl: '/videos/balcony.mp4' },
     { videoUrl: '/videos/bathroom.mp4' },
@@ -22,12 +19,13 @@ export default function RoomPage() {
     { videoUrl: '/videos/bathroom.mp4' },
   ];
 
+ 
   let devices = [
-    { iconUrl: '/images/bulb.svg', title: 'ON', filled: true },
-    { iconUrl: '/images/bulb.svg', title: 'OFF' },
-    { iconUrl: '/images/plug.svg', title: 'OFF' },
-    { iconUrl: '/images/plug.svg', title: 'OFFLINE' },
-    { iconUrl: '/images/plus.svg', outlined: true },
+    { iconUrl: '/images/bulb.svg', title: 'on' },
+    { iconUrl: '/images/bulb.svg', title: 'off'},
+    { iconUrl: '/images/plug.svg', title: 'off' },
+    { iconUrl: '/images/plug.svg', title: 'offline' },
+    { iconUrl: '/images/plus.svg', title: '' },
   ];
 
   return (
