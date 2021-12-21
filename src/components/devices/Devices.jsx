@@ -22,11 +22,6 @@ export default function Devices({ devices }) {
               variant={device.title} />
           </Grid>
         ))}
-          <Card
-            iconUrl={'/images/plus.svg'}
-            title={''}
-            variant={''}
-            outlined={true}/>
       </Grid >
     </div>
   );
