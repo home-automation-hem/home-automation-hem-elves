@@ -2,10 +2,11 @@ import styles from './Devices.module.scss';
 import { Grid, Chip, Typography } from '@mui/material';
 import Card from '../card/Card.jsx';
 
+//todo: remove variant as prop
 export default function Devices({ devices }) {
   return (
     <div className={`${styles['devices-wrapper']}`}>
-      {/*<Grid container width={802} height={403} display={'flex'} justifyContent={'center'}>*/}
+      <Grid container width={802} height={403} display={'flex'} justifyContent={'center'}>
         {devices.map((device, idx) => (
           // <Grid
           //   p={2}
@@ -26,7 +27,7 @@ export default function Devices({ devices }) {
 
       {/*</Grid>*/}
       {/*   ))}*/}
-      {/*</Grid>*/}
+      </Grid>
     </div>
   );
 }
