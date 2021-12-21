@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Card.module.scss';
 import Card from '@mui/material/Card';
-import { Container, Typography, Chip } from '@mui/material';
+import { Container, Typography } from '@mui/material';
+import Chip from '@mui/material/Chip';
 
 export default function Index({ autoPlay, title, variant, iconUrl, outlined = false }) {
   const isVideo = iconUrl?.includes('videos') ||  iconUrl?.includes('mp4');
@@ -14,6 +15,7 @@ export default function Index({ autoPlay, title, variant, iconUrl, outlined = fa
   return (
     <Card className={styles.card} variant={outlined ? 'outlined' : ''}>
       <Typography variant="h3">{title}</Typography>
+      { variant === "offline" ? <Chip label={"!"} /> : '' }
       {iconUrl ? (
         isVideo ? (
           <video
@@ -23,9 +25,6 @@ export default function Index({ autoPlay, title, variant, iconUrl, outlined = fa
             autoplay={autoPlay ? 'autoplay' : null}
             alt="iconUrl" />
         ) : <React.Fragment>
-
-            { variant === "offline" ? <Chip label={"!"} /> : '' }
-
           <img width={'40%'} src={iconUrl} alt="iconUrl" />
         </React.Fragment>
       ) : <img width={'40%'} src={iconUrl} alt="iconUrl" /> }
