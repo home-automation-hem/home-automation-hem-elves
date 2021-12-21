@@ -2,7 +2,7 @@ import styles from './Devices.module.scss';
 import { Grid, Chip, Typography, Container } from '@mui/material';
 import Card from '../card/Card.jsx';
 
-export default function Devices({ devices }) {
+export default function Devices({ devices  }) {
   return (
     <div className={`${styles['devices-wrapper']}`}>
       <Grid container width={802} height={403} display={'flex'} justifyContent={'center'}>

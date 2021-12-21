@@ -13,7 +13,7 @@ export default function User({ name, avatar, size = 69, headingSize, hasWelcome 
           justifyContent="space-around"
           alignItems="center"
         >
-          <Grid item xs={4}>
+          <Grid item xs={5}>
             <Avatar
               className={classNames(styles.avatar)}
               alt="user-avatar"
@@ -21,7 +21,7 @@ export default function User({ name, avatar, size = 69, headingSize, hasWelcome 
               sx={{ width: size, height: size }}
             />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={7}>
             <Typography variant={headingSize} className={classNames(styles.username)}>
               {name}
             </Typography>
