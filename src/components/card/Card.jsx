@@ -24,12 +24,8 @@ export default function Index({ autoPlay, title, variant, iconUrl, outlined = fa
             autoPlay={autoPlay ? 'autoplay' : null}
             autoplay={autoPlay ? 'autoplay' : null}
             alt="iconUrl" />
-        ) : <React.Fragment>
-          <img width={'40%'} src={iconUrl} alt="iconUrl" />
-        </React.Fragment>
-      ) : <React.Fragment>
-        <img width={'40%'} src={iconUrl} alt="iconUrl" />
-      </React.Fragment> }
+        ) : <img width={'40%'} src={iconUrl} alt="iconUrl" />
+      ) : <img width={'40%'} src={iconUrl} alt="iconUrl" />}
     </Card>
   );
 }
