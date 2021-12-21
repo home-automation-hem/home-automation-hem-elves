@@ -19,7 +19,9 @@ export default function Devices({ devices }) {
               key={idx}
               iconUrl={device.iconUrl}
               title={device.title}
-              variant={device.title} />
+              variant={device.title}
+              outlined={idx === devices.length - 1}
+            />
           </Grid>
         ))}
       </Grid >
