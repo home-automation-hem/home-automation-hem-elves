@@ -4,7 +4,7 @@ import Header from '../../src/components/header/Header.jsx';
 import Navigation from '../../src/components/navigation/Navigation.jsx';
 import Devices from '../../src/components/devices/Devices.jsx';
 import Cameras from '../../src/components/cameras/Cameras.jsx';
-import styles from '../Room.module.scss';
+import styles from './Room.module.scss';
 
 
 export default function Index() {
