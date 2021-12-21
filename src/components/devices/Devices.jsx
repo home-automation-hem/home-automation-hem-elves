@@ -4,8 +4,17 @@ import Card from '../card/Card.jsx';
 
 //todo: remove variant as prop
 export default function Devices({ devices }) {
+  devices = [];
+  devices = [
+    { iconUrl: '/images/bulb.svg', title: 'on' },
+    { iconUrl: '/images/bulb.svg', title: 'off'},
+    { iconUrl: '/images/plug.svg', title: 'off' },
+    { iconUrl: '/images/plug.svg', title: 'offline' },
+    // { iconUrl: '/images/plus.svg', title: '' },
+  ];
+
   return (
-    <Container className={`${styles['devices-wrapper']}`}>
+    <div className={`${styles['devices-wrapper']}`}>
       <Grid container width={802} height={403} display={'flex'} justifyContent={'center'}>
         {devices.map((device, idx) => (
           <Grid
@@ -26,6 +35,6 @@ export default function Devices({ devices }) {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </div>
   );
 }
