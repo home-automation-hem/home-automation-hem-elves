@@ -26,6 +26,8 @@ export default function Devices({ devices  }) {
                   title={device.title}
                   variant={device.title}
                   outlined={idx === devices.length - 1}
+                  // onScene={onScene}
+                  // value={selected}
                 />
               </Grid>
           // ) : null
