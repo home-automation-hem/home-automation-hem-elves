@@ -6,7 +6,7 @@ export default function Devices({ devices  }) {
   return (
     <div className={`${styles['devices-wrapper']}`}>
       <Grid container width={802} height={403} display={'flex'} justifyContent={'center'}>
-        {devices.map((device, idx) => (
+        {devices?.map((device, idx) => (
           // (
           //   device.title?.toLowerCase() === "off" ||
           //   device.title?.toLowerCase() === "offline" ||

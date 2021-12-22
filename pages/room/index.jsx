@@ -5,9 +5,10 @@ import Navigation from '../../src/components/navigation/Navigation.jsx';
 import Devices from '../../src/components/devices/Devices.jsx';
 import Cameras from '../../src/components/cameras/Cameras.jsx';
 import styles from './Room.module.scss';
-import SceneComposer from '../../src/components/scene-composer/SceneComposer.jsx';
+import SceneComposer from '../../src/components/scenes/SceneComposer.jsx';
 import Scenes from '../../src/components/scenes/Scenes.jsx';
 import Rooms from '../../src/components/rooms/Rooms.jsx';
+import React from 'react';
 
 
 export default function Index() {
@@ -22,7 +23,15 @@ export default function Index() {
     { videoUrl: '/videos/bathroom.mp4' },
   ];
 
- 
+  let rooms = [
+    { iconUrl: '/images/sunny.svg', title: 'Living room'},
+    { iconUrl: '/images/alarm-clock.svg', title: 'Bedroom' },
+    { iconUrl: '/images/shower.svg', title: 'Toilet'},
+    { iconUrl: '/images/tea-cup.svg', title: 'Patio' },
+    { iconUrl: '/images/rock.svg', title: 'Bathroom' },
+    { iconUrl: '/images/plus.svg', title: 'Create new' },
+  ];
+
   let devices = [
     { iconUrl: '/images/bulb.svg', title: 'on' },
     { iconUrl: '/images/bulb.svg', title: 'off'},
@@ -55,7 +64,7 @@ export default function Index() {
           <Grid item xs={5} sx={{pl: '120px'}}>
             <Cameras cameras={cameras} hasButton={true} />
           </Grid>
-          <Grid item ><SceneComposer devices={<Devices/>} rooms={<Rooms/>}  onScene={(e) => {onCScene(e.target.value)}} scene={<Scenes/>}/></Grid>
+          <Grid item ><SceneComposer devices={devices} rooms={rooms}  onScene={(e) => {onScene(e.target.value)}} scene={<Scenes/>}/></Grid>
         </Grid>
       </Container>
     </div>
