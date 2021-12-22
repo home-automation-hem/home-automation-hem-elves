@@ -28,3 +28,9 @@ export default function Devices({ devices  }) {
     </div>
   );
 }
+
+// (
+//   device.title?.toLowerCase() === "off" ||
+//   device.title?.toLowerCase() === "offline" ||
+//   device.title?.toLowerCase() === "on"
+// ) ? ( ... ) : null
