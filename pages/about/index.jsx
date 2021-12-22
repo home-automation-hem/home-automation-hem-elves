@@ -11,6 +11,7 @@ import Cameras from '../../src/components/cameras/Cameras.jsx';
 import Rooms from '../../src/components/rooms/Rooms.jsx';
 import Energy from '../../src/components/energy/Energy.jsx';
 import Devices from '../../src/components/devices/Devices.jsx';
+import Modal from '../../src/components/modal/Modal.jsx';
 
 export default function About() {
   let rooms = [
@@ -51,6 +52,8 @@ export default function About() {
     // { iconUrl: '/images/plus.svg', title: '' },
   ];
 
+  const [open, setOpen] = React.useState(true);
+
   return (
     <>
       <Header
@@ -62,6 +65,12 @@ export default function About() {
           </React.Fragment>
         }
       />
+
+      <Modal
+        handleClose={() => setOpen(false)}
+        title={"kris test"}
+        buttonText={"btn txt"}
+        open={open} />
 
       <Devices devices={devices} />
 
