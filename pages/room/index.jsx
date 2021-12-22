@@ -5,6 +5,9 @@ import Navigation from '../../src/components/navigation/Navigation.jsx';
 import Devices from '../../src/components/devices/Devices.jsx';
 import Cameras from '../../src/components/cameras/Cameras.jsx';
 import styles from './Room.module.scss';
+import SceneComposer from '../../src/components/scene-composer/SceneComposer.jsx';
+import Scenes from '../../src/components/scenes/Scenes.jsx';
+import Rooms from '../../src/components/rooms/Rooms.jsx';
 
 
 export default function Index() {
@@ -52,6 +55,7 @@ export default function Index() {
           <Grid item xs={5} sx={{pl: '120px'}}>
             <Cameras cameras={cameras} hasButton={true} />
           </Grid>
+          <Grid item ><SceneComposer devices={<Devices/>} rooms={<Rooms/>}  onScene={(e) => {onCScene(e.target.value)}} scene={<Scenes/>}/></Grid>
         </Grid>
       </Container>
     </div>
