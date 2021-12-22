@@ -6,7 +6,7 @@ export default function Scenes({ cards }) {
   return (
     <div className={`${styles['scenes-container']}`}>
       <Grid container width={802} height={403} display={'flex'} justifyContent={'center'} >
-        {cards.map((card, idx) => (
+        {cards?.map((card, idx) => (
           <Grid
           p={2}
             item
@@ -15,7 +15,7 @@ export default function Scenes({ cards }) {
             maxWidth={267}
             minHeight={201}
           >
-            <Card key={idx} iconUrl={card.iconUrl} outlined={card.outlined}/>
+            <Card name={card.name} key={idx} iconUrl={card.iconUrl} outlined={card.outlined} />
           </Grid>
         ))}
       </Grid>
