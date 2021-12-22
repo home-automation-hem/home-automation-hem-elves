@@ -15,7 +15,7 @@ export default function Scenes({ cards }) {
             maxWidth={267}
             minHeight={201}
           >
-            <Card key={idx} iconUrl={card.iconUrl} outlined={card.outlined} />
+            <Card key={idx} iconUrl={card.iconUrl} outlined={card.outlined}/>
           </Grid>
         ))}
       </Grid>
